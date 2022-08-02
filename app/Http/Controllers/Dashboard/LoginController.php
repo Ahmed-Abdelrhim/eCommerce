@@ -6,30 +6,34 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminLoginRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use App\Traits\guarded;
 class LoginController extends Controller
 {
-    //View Admin Login Form
+//    use guarded;
+    //View Admin Login Form Function
     public function adminLoginForm()
     {
         return view('dashboard.auth.login');
     }
 
-    //Checks If Admin In Exists In Database
+    //Checks If Admin In Exists In Database Function
     public function checkAdminIfExists(AdminLoginRequest $request)
     {
         $remember_me = $request->has('remember_me') ? 'true' : 'false';
-
         if (auth()->guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
-            return redirect()->route('admin-dashboard');
+            return redirect()->route('dashboard');
         } else {
-            return redirect()->back()->with('error','Wrong Data Failed To Login');
+            return errors('Username or password is wrong');
         }
     }
 
-    public function show() {
-        return view('layouts.admin');
+    //Admin Logout Function
+    public function logoutAdmin() {
+        //using logout trait
+        $adminLogout = auth()->guard('admin');
+        $adminLogout->logout();
+
+        return redirect()->route('admin.login');
     }
 
-
-}
+    }

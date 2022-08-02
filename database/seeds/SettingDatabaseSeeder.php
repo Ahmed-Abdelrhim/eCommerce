@@ -34,4 +34,5 @@ class SettingDatabaseSeeder extends Seeder
         ]);
     }
 }
+//git config --global user.name
 

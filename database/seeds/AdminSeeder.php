@@ -13,11 +13,16 @@ class AdminSeeder extends Seeder
     {
         //
         Admin::create([
-            'id' => 2,
-            'name' => 'Mohamed Abdelrhman',
-            'email' => 'mohamed.abdelrhman.237@gmail.com',
+            'id' => 5,
+            'name' => 'Test Admin',
+            'email' => 'test.admin@gmail.com',
+            'photo' => '',
             'password' => bcrypt('12345678'),
         ]);
     }
 }
 //composer dump-autoload
+// Bassant Hossam
+// bassant.hossam@gmail.com
+//Aya Alaa
+// aya.alaa@gmail.com

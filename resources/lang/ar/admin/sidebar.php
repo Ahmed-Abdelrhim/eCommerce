@@ -14,6 +14,8 @@ return [
     'Main'   => 'الرئيسية',
     'Latest Orders'   => 'اخر الطلبات',
     'Latest Reviews'   => 'اخر التقيمات',
+    'ADD Translation To This Category (If Needed) ' => 'اضافة ترجمة للقسم (في حالة وجود ترجمة)',
+
     ''   => '',
     ''   => '',
     ''   => '',

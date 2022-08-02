@@ -14,6 +14,8 @@ return [
     'Main'      =>  'Main',
     'Latest Orders'      =>  'Latest Orders',
     'Latest Reviews'      =>  'Latest Reviews',
+    'ADD Translation To This Category (If Needed)' => 'ADD Translation To This Category (If Needed)',
+
     ''      =>  '',
     ''      =>  '',
     ''      =>  '',

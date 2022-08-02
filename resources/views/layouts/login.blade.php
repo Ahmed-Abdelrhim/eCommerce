@@ -36,10 +36,13 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/css-rtl/style-rtl.css')}}">
     <!-- END Custom CSS-->
 {{--    @notify_css--}}
-    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">s
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200;1,300;1,400;1,500;1,700;1,800&display=swap"
+        rel="stylesheet">
     <style>
         body {
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Nunito','Cairo', sans-serif;
         }
     </style>
 </head>
