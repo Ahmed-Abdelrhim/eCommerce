@@ -2,69 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcb63d93-663b-40c0-b35a-6e35314dd5b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/AdminProfileController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/CategoriesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/DisableBackBtn.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AdminProfileRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/MainCategoryRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/CategoryTranslation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Traits/CategoryTrait.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Traits/guarded.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2022_07_29_153950_create_categories_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2022_07_29_154030_create_category_translations_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/35gK6zPm7zfwwZjzan6x6bxSoHTDjLul5CTWXTBJ.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/8Vaf2GcMkEyYmoF7V4i9fTLwMGBS4RjOOPh86WwN.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/admins/1659215681.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/admins/1659216094.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/admins/1659383088.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/1659200290.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/1659201948.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/1659202147.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/1659222080.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/1659228961.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/1659240125.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/1659240745.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/1659240988.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/1659407054.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/1659408126.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/1659408345.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/1659408360.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/1659408372.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/nkIf6H78nNsrb9wLkQtrJCiMmUrc80pXda71OxwG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/profile/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/general.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SettingsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SettingsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/AdminLoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/AdminLoginRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/laravellocalization.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/laravellocalization.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_07_25_173306_admins_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_07_25_173306_admins_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/SettingDatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/SettingDatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/admin/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/admin/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/admin/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/admin/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/settings/shipping/shipping.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/settings/shipping/shipping.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2022_07_29_154030_create_category_translations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_07_29_154030_create_category_translations_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -199,11 +139,15 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/factories" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\eCommerce\blog\database\factories" />
+      <recent name="C:\xampp\htdocs\eCommerce\blog\database\migrations" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\eCommerce\blog\app\Http\Requests" />
       <recent name="C:\xampp\htdocs\eCommerce\blog\app\Models" />
@@ -259,7 +203,9 @@
       <workItem from="1659280978112" duration="23611000" />
       <workItem from="1659371193645" duration="6569000" />
       <workItem from="1659379314125" duration="3387000" />
-      <workItem from="1659402931643" duration="9883000" />
+      <workItem from="1659402931643" duration="10235000" />
+      <workItem from="1659458915718" duration="1852000" />
+      <workItem from="1659472427011" duration="12345000" />
     </task>
     <servers />
   </component>
