@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcb63d93-663b-40c0-b35a-6e35314dd5b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_07_29_154030_create_category_translations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_07_29_154030_create_category_translations_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Brand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Brand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2022_08_03_000000_create_brands_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_08_03_000000_create_brands_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,6 +154,7 @@
       <recent name="C:\xampp\htdocs\eCommerce\blog\database\migrations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\eCommerce\blog\app\Http\Controllers\Dashboard" />
       <recent name="C:\xampp\htdocs\eCommerce\blog\app\Http\Requests" />
       <recent name="C:\xampp\htdocs\eCommerce\blog\app\Models" />
     </key>
@@ -205,7 +211,8 @@
       <workItem from="1659379314125" duration="3387000" />
       <workItem from="1659402931643" duration="10235000" />
       <workItem from="1659458915718" duration="1852000" />
-      <workItem from="1659472427011" duration="12345000" />
+      <workItem from="1659472427011" duration="20540000" />
+      <workItem from="1659623718413" duration="2090000" />
     </task>
     <servers />
   </component>

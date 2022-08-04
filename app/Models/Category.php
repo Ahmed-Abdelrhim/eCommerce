@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+
 use Astrotomic\Translatable\Translatable;
 
 use Illuminate\Database\Eloquent\Model;
@@ -11,8 +12,8 @@ class Category extends Model
     use Translatable;
     //
     protected $table = 'categories';
-    protected $fillable = [ 'category_id', 'slug', 'photo' ,'is_active', 'is_translatable','created_at', 'updated_at'];
-    protected $hidden = [ 'created_at', 'updated_at'];
+    protected $fillable = ['category_id', 'slug', 'photo', 'is_active', 'is_translatable', 'created_at', 'updated_at'];
+    protected $hidden = ['created_at', 'updated_at'];
     public $timestamps = true;
 
     protected $with = ['translations'];
@@ -39,7 +40,7 @@ class Category extends Model
     public static function translate($values)
     {
         foreach ($values as $key => $value) {
-            static::updateOrCreate(['slug' =>$key],
+            static::updateOrCreate(['slug' => $key],
                 [
                     'name' => $value,
                     'is_translatable' => 1
@@ -49,16 +50,30 @@ class Category extends Model
     }
 
     //Using This Function When Need => To Bring Categories Where category_id = NULL
-    public function scopeParent($query) {
+    public function scopeParent($query)
+    {
         return $query->whereNull('category_id');
     }
 
 
-    public function parent() {
-        return $this->belongsTo(self::class,'category_id');
+    public function parent()
+    {
+        return $this->belongsTo(self::class, 'category_id');
     }
 
-    public function child() {
-        return $this->hasMany(self::class , 'id');
+    public function child()
+    {
+        return $this->hasMany(self::class, 'id');
+    }
+
+
+    #################### Relations     ####################
+    public function product() {
+        return $this->hasMany('App\Models\ProductCategory','category_id','product_id');
+    }
+    #################### Relations     ####################
+
+    public function scopeActive($query) {
+        return $query->where('is_active' , 1);
     }
 }

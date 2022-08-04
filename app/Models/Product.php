@@ -39,6 +39,17 @@ class Product extends Model
         'in_stock'=>'boolean',
     ];
     protected $translatedAttributes = ['name','description','short_description'];
+
+
+    ######################## Relations ########################
+    public function image() {
+        return $this->hasMany('App\Models\Images','product_id');
+    }
+
+    public function category() {
+        return $this->belongsToMany('App\Model\ProductCategory','product_id','category_id','id','id');
+    }
+    ######################## Relations ########################
 }
 //id	brand_id	price	special_price	special_price_type	special_price_start	special_price_end
 //selling_price	sku	manage_stock	qty	in_stock	viewed	is_active	deleted_at	created_at	updated_at

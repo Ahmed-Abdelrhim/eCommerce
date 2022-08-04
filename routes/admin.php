@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use App\Http\Controllers\Dashboard\LoginController;
-
+use App\Models\Product;
 //git checkout -b branchName
 /*
 |--------------------------------------------------------------------------
@@ -70,9 +70,12 @@ Route::group(['middleware' => 'disable_back_btn'], function () {
             ###################################### Admin Logout Route   ######################################
             Route::get('admin.logout', 'LoginController@logoutAdmin')->name('admin.logout');
             ###################################### Admin Logout Route   ######################################
+            ###################################### Admin Products Route   ######################################
+                Route::get('product','ProductController@index');
+            ###################################### Admin Products Route   ######################################
+
 
         }); // End Admin Routes And Middleware auth:admin
-
 
         ###################################### Admin Routes Only  ######################################
 ###################################### Mcamara Routes     ######################################

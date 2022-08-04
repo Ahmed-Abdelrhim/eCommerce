@@ -10,11 +10,16 @@ class Brand extends Model
     //
     use Translatable;
     protected $table = 'brands';
-    protected $fillable = ['is_active','created_at','updated_at'];
+    protected $fillable = ['is_active','image','created_at','updated_at'];
     protected $hidden = ['created_at','updated_at'];
     public $timestamps = true;
 
     protected $with = ['translations'];
     protected $casts = ['is_active' => 'boolean'];
     protected $translatedAttributes = ['name'];
+
+
+    public function scopeActive($query) {
+        return $query->where('is_active' , 1);
+    }
 }
