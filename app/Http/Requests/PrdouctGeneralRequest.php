@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\ProductQty;
 use Illuminate\Foundation\Http\FormRequest;
 
 class PrdouctGeneralRequest extends FormRequest
@@ -31,6 +32,10 @@ class PrdouctGeneralRequest extends FormRequest
             'categories' => 'required|array|min:1',
             'categories.*' => 'numeric|exists:categories,id',
             'brand_id' => 'required|numeric|max:1',
+            'selling_price' => 'required | numeric ',
+            'manage_stock' => 'required |in:0,1',
+            'sku' => 'required | numeric',
+            'qty' => [new ProductQty($this->manage_stock)],
         ];
     }
 

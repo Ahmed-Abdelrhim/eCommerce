@@ -43,9 +43,9 @@ class ProductController extends Controller
 
 
     //return product price view
-    public function productPrice() {
-        return view('dashboard.products.general.price');
-    }
+//    public function productPrice() {
+//        return view('dashboard.products.general.price');
+//    }
 
     //store product general data in database
     public function store(PrdouctGeneralRequest $request) {
@@ -54,11 +54,12 @@ class ProductController extends Controller
         }
         $fields = [$request->slug,$request->name,$request->description];
 
-       if($this->validateRequestString($fields)) {
+//       if($this->validateRequestString($fields)) {
            return $request ;
-       } else {
-           return 'Enter Only String In Slug , Name , Description Fields ';
-       }
+//       }
+//       else {
+//           return 'Enter Only String In Slug , Name , Description Fields ';
+//       }
     }
 
     //check if the request of slug , name , description are strings or not

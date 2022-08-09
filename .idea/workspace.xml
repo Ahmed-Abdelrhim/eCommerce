@@ -3,15 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bcb63d93-663b-40c0-b35a-6e35314dd5b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/AdminLoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/AdminLoginRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PrdouctGeneralRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PrdouctGeneralRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/general/general.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/general/general.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -219,7 +213,7 @@
       <workItem from="1659710169078" duration="3091000" />
       <workItem from="1659732888891" duration="9988000" />
       <workItem from="1659818127555" duration="1691000" />
-      <workItem from="1659973041119" duration="9734000" />
+      <workItem from="1659973041119" duration="14620000" />
     </task>
     <servers />
   </component>

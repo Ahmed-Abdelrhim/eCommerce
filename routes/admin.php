@@ -38,13 +38,13 @@ Route::group(['middleware' => 'disable_back_btn'], function () {
             Route::get('dashboard', 'DashboardController@index')->name('dashboard');
             Route::get('cantRedirect', 'DashboardController@index')->name('cantRedirect');
             ###################################### Admin Dashboard and CantRedirect Routes   ###################
-            ###################################### Admin Shipping Routes   ######################################
+            ######################################  Shipping Routes   ######################################
             Route::group(['prefix' => 'settings'], function () {
                 Route::get('shipping/{type}', 'SettingsController@shippingMethods')->name('shipping');
                 Route::put('edit-shipping/{id}', 'SettingsController@editShippingMethod')->name('edit.shipping.methods');
             });
-            ###################################### Admin Shipping Routes   ######################################
-            ###################################### Admin Main And Sub Categories Routes   ######################################
+            ######################################  Shipping Routes   ######################################
+            ######################################  Categories Routes   ######################################
             Route::group(['prefix' => 'categories'] , function() {
                 //View All Categories Route
                 Route::get('categories/{type?}','CategoriesController@index') -> name('view-categories');
@@ -60,21 +60,21 @@ Route::group(['middleware' => 'disable_back_btn'], function () {
                 Route::get('delete-category/{id}','CategoriesController@deleteCategory')->name('delete-category');
 
             });
-            ###################################### Admin  Main And Sub Categories Routes   ######################################
-            ###################################### Admin Edit Profile Routes   ######################################
+            ######################################  Categories Routes   ######################################
+            ######################################  Edit Profile Routes   ######################################
             Route::Group(['prefix' => 'profile'], function () {
                 Route::get('admin-profile', 'AdminProfileController@adminProfile')->name('admin-profile');
                 Route::put('update-admin-profile/{id}', 'AdminProfileController@updateAdminProfile')->name('update-admin-profile');
             });
-            ###################################### Admin Edit Profile Routes   ######################################
-            ###################################### Admin Logout Route   ######################################
+            ######################################  Edit Profile Routes   ######################################
+            ######################################  Logout Route   ######################################
             Route::get('admin.logout', 'LoginController@logoutAdmin')->name('admin.logout');
-            ###################################### Admin Logout Route   ######################################
-            ###################################### Admin Products Route   ######################################
+            ######################################  Logout Route   ######################################
+            ######################################  Products Route   ######################################
                 Route::get('product-general','ProductController@create')->name('products-general-info');
-                Route::get('product-price','ProductController@productPrice')->name('product-price');
-                Route::post('store-general-product-info','ProductController@store')->name('store-general-product-info');
-            ###################################### Admin Products Route   ######################################
+//                Route::get('product-price','ProductController@productPrice')->name('product-price');
+                Route::post('store-general-product-info','ProductController@store')->name('store-product-info');
+            ######################################  Products Route   ######################################
 
 
         }); // End Admin Routes And Middleware auth:admin
