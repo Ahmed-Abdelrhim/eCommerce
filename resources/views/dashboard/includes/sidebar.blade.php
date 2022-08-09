@@ -55,21 +55,37 @@
             </li>
             {{--End Sub Categories--}}
             {{--Start Stores--}}
-            <li class="nav-item"><a href=""><i class="la la-male"></i>
-                    <span class="menu-title" data-i18n="nav.dash.main">{{__('admin/sidebar.Stores') }}  </span>
-                    <span
-                        class="badge badge badge-success badge-pill float-right mr-2"></span>
-                    {{--                                        {{App\Models\Vendor::count()}}--}}
+{{--            <li class="nav-item"><a href=""><i class="la la-male"></i>--}}
+{{--                    <span class="menu-title" data-i18n="nav.dash.main">{{__('admin/sidebar.Stores') }}  </span>--}}
+{{--                    <span--}}
+{{--                        class="badge badge badge-success badge-pill float-right mr-2"></span>--}}
+{{--                    --}}{{--                                        {{App\Models\Vendor::count()}}--}}
+{{--                </a>--}}
+{{--                <ul class="menu-content">--}}
+{{--                    <li class="active"><a class="menu-item" href="#"--}}
+{{--                                          data-i18n="nav.dash.ecommerce">{{__('admin/sidebar.Show All')}} </a>--}}
+{{--                    </li>--}}
+{{--                    <li><a class="menu-item" href="#" data-i18n="nav.dash.crypto">{{__('admin/sidebar.Add store')}}</a>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
+{{--            </li>--}}
+            {{--End Stores--}}
+
+            {{--Start Product--}}
+{{--            <i class="fa-brands fa-product-hunt"></i>--}}
+            <li class="nav-item"><a href=""><i class="fa-brands fa-product-hunt"></i>
+                    <span class="menu-title" data-i18n="nav.dash.main">{{__('admin/index.Products') }}  </span>
+
                 </a>
                 <ul class="menu-content">
-                    <li class="active"><a class="menu-item" href="#"
-                                          data-i18n="nav.dash.ecommerce">{{__('admin/sidebar.Show All')}} </a>
-                    </li>
-                    <li><a class="menu-item" href="#" data-i18n="nav.dash.crypto">{{__('admin/sidebar.Add store')}}</a>
+{{--                    <li class="active"><a class="menu-item" href="#"--}}
+{{--                                          data-i18n="nav.dash.ecommerce">{{__('admin/sidebar.Show All')}} </a>--}}
+{{--                    </li>--}}
+                    <li><a class="menu-item" href="{{route('products-general-info')}}" data-i18n="nav.dash.crypto">{{__('admin/index.Add Product')}}</a>
                     </li>
                 </ul>
             </li>
-            {{--End Stores--}}
+            {{--End Product--}}
 
             {{--Settings--}}
             <li class=" nav-item"><a href="#"><i class="la la-bars"></i> <span class="menu-title"

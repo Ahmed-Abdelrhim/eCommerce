@@ -71,7 +71,9 @@ Route::group(['middleware' => 'disable_back_btn'], function () {
             Route::get('admin.logout', 'LoginController@logoutAdmin')->name('admin.logout');
             ###################################### Admin Logout Route   ######################################
             ###################################### Admin Products Route   ######################################
-                Route::get('product','ProductController@index');
+                Route::get('product-general','ProductController@create')->name('products-general-info');
+                Route::get('product-price','ProductController@productPrice')->name('product-price');
+                Route::post('store-general-product-info','ProductController@store')->name('store-general-product-info');
             ###################################### Admin Products Route   ######################################
 
 

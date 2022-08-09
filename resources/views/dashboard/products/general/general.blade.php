@@ -1,6 +1,5 @@
 @extends('layouts.admin')
 @section('content')
-
     <div class="app-content content">
         <div class="content-wrapper">
             {{-- Start Headlines --}}
@@ -10,15 +9,15 @@
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a
-                                        href="{{route('dashboard')}}">{{__('admin/index.Dashboard')}} </a>
+                                        href="{{ route('dashboard') }}">{{ __('admin/index.Dashboard') }} </a>
                                 </li>
-                                <li class="breadcrumb-item"><a href="#"> {{__('admin/index.ADD')}}</a>
+                                <li class="breadcrumb-item"><a href="#"> {{ __('admin/index.ADD') }}</a>
                             </ol>
                         </div>
                     </div>
                 </div>
             </div>
-            {{--End Headlines  --}}
+            {{-- End Headlines --}}
             <div class="content-body">
                 <!-- Basic form layout section start -->
                 <section id="basic-form-layouts">
@@ -26,10 +25,8 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title"
-                                        id="basic-layout-form">{{__('admin/index.Add Product')}} </h4>
-                                    <a class="heading-elements-toggle"><i
-                                            class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <h4 class="card-title" id="basic-layout-form">{{ __('admin/index.Add Product') }} </h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
                                         <ul class="list-inline mb-0">
                                             <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
@@ -39,175 +36,386 @@
                                         </ul>
                                     </div>
                                 </div>
-                                {{--Start Alerts Includes--}}
+                                {{-- Start Alerts Includes --}}
                                 <div class="col-8 mx-auto">
                                     @include('dashboard.includes.alerts.success')
                                     @include('dashboard.includes.alerts.errors')
                                 </div>
-                                {{--End Alerts Includes--}}
+                                {{-- End Alerts Includes --}}
                                 <div class="card-content collapse show">
                                     <div class="card-body">
-                                        <form class="form"
-                                              action="#"
-                                              method="POST" enctype="multipart/form-data">
+                                        <form class="form" action="{{ route('store-general-product-info') }}"
+                                            method="POST" enctype="multipart/form-data">
                                             @csrf
-                                            {{--<input name="id" value="" type="hidden">--}}
-                                            {{-- Start Category Data--}}
+                                            <input name="id" value="" type="hidden">
+                                            {{-- Start Category Data --}}
                                             <div class="form-body">
                                                 <h4 class="form-section"><i class="ft-home"></i>
-                                                    {{__('admin/index.Product Data')}}
+                                                    {{ __('admin/index.Product Data') }}
                                                 </h4>
-                                                {{-- Start Product Slug And Name , Description , Short Description In Translations Table  --}}
-                                                <div class="row">
-                                                    {{--##################################################################################--}}
-                                                    {{-- Start Product Slug --}}
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="form-group">
-                                                            <label
-                                                                for="projectinput1">{{__('admin/index.Add Product Slug')}}</label>
-                                                            <input type="text" id="name" class="form-control"
-                                                                   placeholder="" value="{{old('slug')}}"
-                                                                   name="slug">
-                                                            @error('slug')
-                                                            <span
-                                                                class="text-danger">{{__('admin/index.This Field Is Required')}} </span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-                                                    {{--End Product Slug  --}}
-                                                    {{--Start Product Name In Translations Table  --}}
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="form-group">
-                                                            <label
-                                                                for="projectinput1">{{__('admin/index.Add Product Name In Translation Table')}}</label>
-                                                            <input type="text" id="nameTrans" class="form-control"
-                                                                   value="{{old('name')}}"
-                                                                   name="name">
-                                                            @error('name')
-                                                            <span
-                                                                class="text-danger">{{__('admin/index.This Field Is Required')}} </span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-                                                    {{--End Product Name In Translations Table  --}}
-                                                    {{--Start Product Description In Translations Table  --}}
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="form-group">
-                                                            <label
-                                                                for="projectinput1">{{__('admin/index.Add Product Description In Translation Table')}}</label>
-                                                            <input type="text" id="nameTrans" class="form-control"
-                                                                   value="{{old('description')}}"
-                                                                   name="description">
-                                                            @error('description')
-                                                            <span
-                                                                class="text-danger">{{__('admin/index.This Field Is Required')}} </span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-                                                    {{--End Product Description In Translations Table  --}}
-                                                    {{--Start Product Short Description In Translations Table  --}}
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="form-group">
-                                                            <label
-                                                                for="projectinput1">{{__('admin/index.Add Product Short Description In Translation Table')}}</label>
-                                                            <input type="text" id="nameTrans" class="form-control"
-                                                                   value="{{old('short_description')}}"
-                                                                   name="short_description">
-                                                            @error('short_description')
-                                                            <span
-                                                                class="text-danger">{{__('admin/index.This Field Is Required')}} </span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-                                                    {{--End Product Short Description In Translations Table  --}}
-                                                    {{--##################################################################################--}}
-                                                    {{--Start Product Category dropdown--}}
-                                                    @isset($data['categories'])
-                                                        <div class="col-md-6">
+                                                {{-- Start Product First Data --}}
+                                                <div class="first-product-data" id="first_data">
+                                                    {{-- Start Product Slug And Name , Description , Short Description In Translations Table --}}
+                                                    <div class="row">
+                                                        {{-- ################################################################################## --}}
+                                                        {{-- Start Product Slug --}}
+                                                        <div class="col-md-6 col-sm-12">
                                                             <div class="form-group">
                                                                 <label
-                                                                    for="projectinput2"> {{__('admin/index.Product Category')}} </label>
-                                                                <select name="categories" class="select2 form-control"
+                                                                    for="projectinput1">{{ __('admin/index.Add Product Slug') }}</label>
+                                                                <input type="text" id="name" class="form-control"
+                                                                    placeholder="" value="{{ old('slug') }}"
+                                                                    name="slug">
+                                                                @error('slug')
+                                                                    <span
+                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                    </span>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
+                                                        {{-- End Product Slug --}}
+                                                        {{-- Start Product Name In Translations Table --}}
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="form-group">
+                                                                <label
+                                                                    for="projectinput1">{{ __('admin/index.Add Product Name In Translation Table') }}</label>
+                                                                <input type="text" id="name" class="form-control"
+                                                                    value="{{ old('name') }}" name="name">
+                                                                @error('name')
+                                                                    <span
+                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                    </span>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
+                                                        {{-- End Product Name In Translations Table --}}
+                                                        {{-- Start Product Description In Translations Table --}}
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="form-group">
+                                                                <label
+                                                                    for="projectinput1">{{ __('admin/index.Add Product Description In Translation Table') }}</label>
+                                                                <input type="text" id="nameTrans" class="form-control"
+                                                                    name="description">
+                                                                @error('description')
+                                                                    <span
+                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                    </span>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
+                                                        {{-- End Product Description In Translations Table --}}
+                                                        {{-- Start Product Short Description In Translations Table --}}
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="form-group">
+                                                                <label
+                                                                    for="projectinput1">{{ __('admin/index.Add Product Short Description In Translation Table') }}</label>
+                                                                <input type="text" id="nameTrans" class="form-control"
+                                                                    value="{{ old('short_description') }}"
+                                                                    name="short_description">
+                                                                @error('short_description')
+                                                                    <span
+                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                    </span>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
+                                                        {{-- End Product Short Description In Translations Table --}}
+                                                        {{-- ################################################################################## --}}
+                                                        {{-- Start Product Category dropdown --}}
+                                                        @isset($data['categories'])
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput2">
+                                                                        {{ __('admin/index.Product Category') }} </label>
+                                                                    <select name="categories[]" class="select2 form-control"
                                                                         multiple>
-                                                                    <optgroup
-                                                                        label="{{__('admin/index.Open this select menu')}}">
+                                                                        <optgroup
+                                                                            label="{{ __('admin/index.Open this select menu') }}">
 
-                                                                        @foreach ($data['categories'] as $cat)
-                                                                            <option value="{{ $cat->id }}">
-                                                                                {{$cat->slug}}
-                                                                            </option>
-                                                                        @endforeach
-                                                                    </optgroup>
-                                                                </select>
-                                                                @error('categories')
-                                                                <span class="text-danger"> {{ $message }}</span>
-                                                                @enderror
+                                                                            @foreach ($data['categories'] as $cat)
+                                                                                <option value="{{ $cat->id }}">
+                                                                                    {{ $cat->slug }}
+                                                                                </option>
+                                                                            @endforeach
+                                                                        </optgroup>
+                                                                    </select>
+                                                                    @error('categories')
+                                                                        <span class="text-danger"> {{ $message }}</span>
+                                                                    @enderror
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                    @endisset
-                                                    {{--End Product Category dropdown--}}
-                                                    {{--Start Product Brand dropdown--}}
-                                                    @isset($data['brands'])
+                                                        @endisset
+                                                        {{-- End Product Category dropdown --}}
+                                                        {{-- Start Product Brand dropdown --}}
+                                                        @isset($data['brands'])
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput2">
+                                                                        {{ __('admin/index.Product Brand') }} </label>
+                                                                    <select name="brand_id" class="select2 form-control">
+                                                                        <optgroup
+                                                                            label="{{ __('admin/index.Open this select menu') }}">
+
+                                                                            @foreach ($data['brands'] as $brand)
+                                                                                <option value="{{ $brand->id }}">
+                                                                                    {{ $brand->name }}
+                                                                                </option>
+                                                                            @endforeach
+                                                                        </optgroup>
+                                                                    </select>
+                                                                    @error('brand_id')
+                                                                        <span class="text-danger"> {{ $message }}</span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+
+                                                        @endisset
+                                                        {{-- End Product Brand dropdown --}}
+                                                    </div>
+                                                    {{-- End Product Slug And Name , Description , Short Description In Translations Table --}}
+                                                    {{-- Start Category Status --}}
+                                                    <div class="row">
                                                         <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <label
-                                                                    for="projectinput2"> {{__('admin/index.Product Brand')}} </label>
-                                                                <select name="brands" class="select2 form-control"
-                                                                >
-                                                                    <optgroup
-                                                                        label="{{__('admin/index.Open this select menu')}}">
+                                                            <div class="form-group mt-1">
+                                                                <input type="checkbox" value="1" name="status"
+                                                                    id="switcheryColor4" class="switchery" checked
+                                                                    data-color="success" />
+                                                                <label for="switcheryColor4"
+                                                                    class="card-title ml-1">{{ __('admin/index.Status') }}
+                                                                </label>
 
-                                                                        @foreach ($data['brands'] as $brand)
-                                                                            <option value="{{ $brand->id }}">
-                                                                                {{$brand->name}}
-                                                                            </option>
-                                                                        @endforeach
-                                                                    </optgroup>
-                                                                </select>
-                                                                @error('brands')
-                                                                <span class="text-danger"> {{ $message }}</span>
+                                                                @error('status')
+                                                                    <span class="text-danger"> </span>
                                                                 @enderror
                                                             </div>
-                                                        </div>
-
-                                                    @endisset
-                                                    {{--End Product Brand dropdown--}}
-                                                </div>
-                                                {{-- End Product Slug And Name , Description , Short Description In Translations Table  --}}
-                                                {{--Start Category Status --}}
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group mt-1">
-                                                            <input type="checkbox" value="1" name="status"
-                                                                   id="switcheryColor4" class="switchery"
-                                                                   checked data-color="success"/>
-                                                            <label for="switcheryColor4"
-                                                                   class="card-title ml-1">{{__('admin/index.Status')}}
-                                                            </label>
-
-                                                            @error('status')
-                                                            <span class="text-danger"> </span>
-                                                            @enderror
                                                         </div>
                                                     </div>
+                                                    {{-- End Category Status --}}
                                                 </div>
-                                                {{--End Category Status --}}
+                                                {{-- End Product First Data --}}
+
+
+
+                                                <div class="btn btn-outline-dark next mx-auto" id="next_first">Product
+                                                    Price Data</div>
+
+
+
+
+                                                {{-- Start Product Price Data --}}
+                                                <div class="product-price-data hidden" id="second">
+                                                    <h4 class="form-section">
+                                                        {{ __('admin/index.Product Price') }}
+                                                    </h4>
+                                                    <div class="row">
+                                                        {{-- Start Product Price --}}
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="form-group">
+                                                                <label
+                                                                    for="projectinput1">{{ __('admin/index.Add Product Price') }}</label>
+                                                                <input type="number" id="name" class="form-control"
+                                                                    placeholder="" value="{{ old('slug') }}"
+                                                                    name="price">
+                                                                @error('price')
+                                                                    <span
+                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                    </span>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
+                                                        {{-- End Product Price --}}
+
+
+
+
+                                                        {{-- Start Product Special_price --}}
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="form-group">
+                                                                <label
+                                                                    for="projectinput1">{{ __('admin/index.Add Product Special_price ') }}</label>
+                                                                <input type="text" id="name" class="form-control"
+                                                                    value="{{ old('special_price') }}"
+                                                                    name="special_price">
+                                                                @error('special_price')
+                                                                    <span
+                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                    </span>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
+                                                        {{-- End Product Special_price --}}
+
+
+
+
+
+
+
+
+
+                                                        {{-- Start Product Special_price_Start --}}
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="form-group">
+                                                                <label
+                                                                    for="projectinput1">{{ __('admin/index.Add Product Special_price_start') }}</label>
+                                                                <input type="date" id="nameTrans" class="form-control"
+                                                                    value="{{ old('special_price_start') }}"
+                                                                    name="special_price_start">
+                                                                @error('special_price_start')
+                                                                    <span
+                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                    </span>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
+                                                        {{-- End Product Special_price_start --}}
+
+
+
+
+
+
+
+                                                        {{-- Start Product special_price_end --}}
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="form-group">
+                                                                <label
+                                                                    for="projectinput1">{{ __('admin/index.Add Product Special_price_end') }}</label>
+                                                                <input type="date" id="nameTrans" class="form-control"
+                                                                    value="{{ old('special_price_end') }}"
+                                                                    name="special_price_end">
+                                                                @error('special_price_end')
+                                                                    <span
+                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                    </span>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
+                                                        {{-- End Product special_price_end --}}
+
+
+                                                        {{-- Start Product Selling_price --}}
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="form-group">
+                                                                <label
+                                                                    for="projectinput1">{{ __('admin/index.Add Product selling_price') }}</label>
+                                                                <input type="number" id="nameTrans" class="form-control"
+                                                                    value="{{ old('selling_price') }}"
+                                                                    name="selling_price">
+                                                                @error('selling_price')
+                                                                    <span
+                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                    </span>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
+                                                        {{-- End Product Selling_price --}}
+                                                    </div>
+                                                    <div class="btn btn-outline-dark next mx-auto" id="next_second">
+                                                        Product Inventory Data</div>
+                                                </div>
+                                                {{-- End Product Price Data --}}
+
+
+                                                {{-- Start Product Inventory Data --}}
+                                                <div id="product_inventory" class="product-inventory-data hidden">
+                                                    <h4 class="form-section">
+                                                        {{ __('admin/index.Product Inventory Data') }}
+                                                    </h4>
+                                                    <div class="row">
+                                                        {{-- Start Product Sku --}}
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="form-group">
+                                                                <label
+                                                                    for="projectinput1">{{ __('admin/index.Add Product Sku') }}</label>
+                                                                <input type="number" id="name" class="form-control"
+                                                                    placeholder="" value="{{ old('sku') }}"
+                                                                    name="sku">
+                                                                @error('sku')
+                                                                    <span
+                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                    </span>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
+                                                        {{-- End Product Sku --}}
+
+
+                                                        {{-- Start Product Manage Inventory --}}
+                                                        <div class="col-md-6 ">
+                                                            <div class="form-group">
+                                                                <label
+                                                                    for="projectinput1">{{ __('admin/index.Manage Inventory') }}</label>
+                                                                <select name="manage_inventory"
+                                                                    class="select2 form-control">
+                                                                    <optgroup
+                                                                        label="{{ __('admin/index.Manage Inventory') }}">
+                                                                        <option value="1">Allow Tracking</option>
+                                                                        <option value="0" selected>Don't Allow
+                                                                            Tracking</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                                @error('manage_inventory')
+                                                                    <span
+                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                    </span>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
+                                                        {{-- End Product Manage Inventory --}}
+
+                                                        {{-- Start Product Availability --}}
+                                                        <div class="col-md-6 ">
+                                                            <div class="form-group">
+                                                                <label
+                                                                    for="projectinput1">{{ __('admin/index.Availability') }}</label>
+                                                                <select name="Availability" class="select2 form-control">
+                                                                    <optgroup
+                                                                        label="{{ __('admin/index.Product Availability') }}">
+                                                                        <option value="1">Available</option>
+                                                                        <option value="0">Not Available</option>
+                                                                    </optgroup>
+                                                                </select>
+
+                                                                @error('Availability')
+                                                                    <span
+                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                    </span>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
+                                                        {{-- End Product Availability --}}
+                                                    </div>
+
+                                                </div>
+                                                {{-- End Product Inventory Data --}}
+
+
+
                                             </div>
-                                            {{--End Category Data --}}
-                                            {{-- Start Category Actions--}}
+                                            {{-- End Category Data --}}
+
+                                            {{-- Start Category Actions --}}
                                             <div class="form-actions">
                                                 <button type="button" class="btn btn-warning mr-1"
-                                                        onclick="history.back();">
-                                                    <i class="ft-x"></i> {{__('admin/index.Cancel')}}
+                                                    onclick="history.back();">
+                                                    <i class="ft-x"></i> {{ __('admin/index.Cancel') }}
                                                 </button>
                                                 <button type="submit" class="btn btn-primary">
-                                                    <i class="la la-check-square-o"></i> {{__('admin/index.Add')}}
+                                                    <i class="la la-check-square-o"></i> {{ __('admin/index.Add') }}
                                                 </button>
                                             </div>
-                                            {{--End Category Actions --}}
-                                        </form>
+                                            {{-- End Category Actions --}}
 
+
+                                        </form>
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination ">
+                                                <li class="page-item"><a class="page-link"
+                                                        href="{{ route('product-price') }}">Next</a></li>
+                                            </ul>
+                                        </nav>
                                     </div>
                                 </div>
                             </div>
@@ -220,3 +428,30 @@
     </div>
 
 @endsection
+
+@section('script')
+    <script>
+        let btn = document.getElementById('next_first');
+        let btnSecond = document.getElementById('next_second');
+        let productSecondData = document.getElementById('second');
+        let product_inventory = document.getElementById('product_inventory');
+        btn.addEventListener('click', function() {
+            productSecondData.classList.toggle('hidden');
+            if (productSecondData.classList.contains('hidden')) {
+                btn.innerText = 'Product Price Data ';
+                product_inventory.classList.add('hidden');
+            } else {
+                btn.innerText = 'previous';
+            }
+        });
+
+        btnSecond.addEventListener('click', function() {
+            product_inventory.classList.toggle('hidden');
+            if (product_inventory.classList.contains('hidden')) {
+                btnSecond.innerText = 'Product Inventory Data ';
+            } else {
+                btnSecond.innerText = 'previous';
+            }
+        });
+    </script>
+@stop

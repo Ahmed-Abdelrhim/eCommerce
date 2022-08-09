@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminLoginRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Traits\guarded;
 class LoginController extends Controller
 {
 //    use guarded;
@@ -23,6 +22,7 @@ class LoginController extends Controller
         if (auth()->guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
             return redirect()->route('dashboard');
         } else {
+//            return redirect()->back()->with(['errors' => 'Email or password is wrong!']);
             return errors('Username or password is wrong');
         }
     }

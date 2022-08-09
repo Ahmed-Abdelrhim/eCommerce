@@ -24,7 +24,7 @@ class AdminLoginRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => 'required | email',
+            'email' => 'required | string',
             'password' => 'required|min:8|string',
         ];
     }

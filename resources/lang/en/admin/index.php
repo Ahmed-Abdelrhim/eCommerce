@@ -65,7 +65,7 @@ return [
     'Product Category' => 'Product Category',
     'Product Brand' => 'Product Brand',
     'Add Product' => 'Add Product',
-    '' => '',
+    'Products' => 'Products',
     '' => '',
     '' => '',
     '' => '',
