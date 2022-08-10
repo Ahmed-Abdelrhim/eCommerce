@@ -49,6 +49,11 @@ class Product extends Model
     public function category() {
         return $this->belongsToMany('App\Model\ProductCategory','product_id','category_id','id','id');
     }
+
+    public function images() {
+        return $this->morphMany(Image::class,'imageable');
+    }
+
     ######################## Relations ########################
 }
 //id	brand_id	price	special_price	special_price_type	special_price_start	special_price_end

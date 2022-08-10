@@ -3,15 +3,28 @@
   border: 2px dashed #666EE8;
   background: #F4F5FA; }
   .dropzone .dz-message {
-    font-size: 2rem;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 100%;
-    height: 300px;
-    margin-top: -30px;
-    color: #666EE8;
-    text-align: center; }
+    /*font-size: 2rem;*/
+    /*position: absolute;*/
+    /*top: 35%;*/
+    /*right: 0;*/
+    /*width: 100%;*/
+    /*height: 300px;*/
+    /*margin-top: -30px;*/
+    /*color: #666EE8;*/
+    /*text-align: center;*/
+
+
+      font-size: 2rem;
+      position: absolute;
+      top: 35%;
+      right: 0;
+      width: 100%;
+      height: 100px;
+      margin-top: -85px;
+      color: #666EE8;
+      text-align: center;
+
+  }
   .dropzone .dz-message:before {
     content: "\e94b";
     font-family: 'feather';

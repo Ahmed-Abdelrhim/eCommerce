@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Dashboard\ProductController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use App\Http\Controllers\Dashboard\LoginController;
@@ -72,8 +73,24 @@ Route::group(['middleware' => 'disable_back_btn'], function () {
             ######################################  Logout Route   ######################################
             ######################################  Products Route   ######################################
                 Route::get('product-general','ProductController@create')->name('products-general-info');
-//                Route::get('product-price','ProductController@productPrice')->name('product-price');
+
                 Route::post('store-general-product-info','ProductController@store')->name('store-product-info');
+
+                Route::get('products',[ProductController::class , 'index'])->name('products');
+
+                Route::get('view_full_product_data/{id}',[ProductController::class, 'viewFullProduct'])->name('full-product');
+
+                Route::get('image/{id}','ProductController@viewImageForm')->name('images');
+
+                Route::post('products-images-store',[ProductController::class,'dropzoneImages'] )->name('products.images.store');
+
+                Route::post('save-product-images/{id}',[ProductController::class ,'saveImagesToDatabase'])->name('save.images.database');
+
+                Route::get('update-product',[ProductController::class , 'updateProduct'])->name('update-product');
+
+                Route::get('delete-product',[ProductController::class , 'deleteProduct'])->name('delete-product');
+
+                Route::get('play',[ProductController::class , 'encode']);
             ######################################  Products Route   ######################################
 
 

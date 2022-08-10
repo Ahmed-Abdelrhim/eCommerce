@@ -2,10 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcb63d93-663b-40c0-b35a-6e35314dd5b7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/'numeric" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/ProductImagesRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Rules/SellingPrice.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/1660151822.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/1660151851.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/products/general/fullProduct.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/products/general/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/products/images/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/general.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/CategoriesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/PrdouctGeneralRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PrdouctGeneralRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/CategoryTranslation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CategoryTranslation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Images.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2022_07_29_153950_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_07_29_153950_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2022_08_03_010839_create_images_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_08_03_010839_create_images_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/admin/css-rtl/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css-rtl/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/admin/css-rtl/plugins/file-uploaders/dropzone.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css-rtl/plugins/file-uploaders/dropzone.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/admin/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/admin/js/core/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/js/core/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/general/general.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/general/general.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/general/price.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,6 +45,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="blog" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -143,7 +172,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -213,7 +242,11 @@
       <workItem from="1659710169078" duration="3091000" />
       <workItem from="1659732888891" duration="9988000" />
       <workItem from="1659818127555" duration="1691000" />
-      <workItem from="1659973041119" duration="14620000" />
+      <workItem from="1659973041119" duration="23931000" />
+      <workItem from="1660061304497" duration="25279000" />
+      <workItem from="1660148105147" duration="4961000" />
+      <workItem from="1660161821140" duration="3872000" />
+      <workItem from="1660172098070" duration="2772000" />
     </task>
     <servers />
   </component>

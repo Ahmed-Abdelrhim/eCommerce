@@ -20,8 +20,8 @@ class CategoriesController extends Controller
     public function index($type)
     {
         if (in_array($type, ['main-category', 'sub-category'])) {
-            if ($type === 'main-category') {
-                $categories = Category::parent()->paginate(PAGINATION_COUNT);
+            if ($type == 'main-category') {
+                $categories = Category::where('category_id',null)->get();
                 return view('dashboard.categories.index', compact('categories'));
             } else {
                 $categories = Category::where('category_id', '!=', Null)->get();

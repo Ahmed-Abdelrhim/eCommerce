@@ -25,8 +25,10 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title" id="basic-layout-form">{{ __('admin/index.Add Product') }} </h4>
-                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <h4 class="card-title"
+                                        id="basic-layout-form">{{ __('admin/index.Add Product') }} </h4>
+                                    <a class="heading-elements-toggle"><i
+                                            class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
                                         <ul class="list-inline mb-0">
                                             <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
@@ -45,7 +47,7 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body">
                                         <form class="form" action="{{ route('store-product-info') }}"
-                                            method="POST" enctype="multipart/form-data">
+                                              method="POST" enctype="multipart/form-data">
                                             @csrf
                                             <input name="id" value="" type="hidden">
                                             {{-- Start Category Data --}}
@@ -64,11 +66,11 @@
                                                                 <label
                                                                     for="projectinput1">{{ __('admin/index.Add Product Slug') }}</label>
                                                                 <input type="text" id="name" class="form-control"
-                                                                    placeholder="" value="{{ old('slug') }}"
-                                                                    name="slug">
+                                                                       placeholder="" value="{{ old('slug') }}"
+                                                                       name="slug">
                                                                 @error('slug')
-                                                                    <span
-                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                <span
+                                                                    class="text-danger">{{ __('admin/index.This Field Is Required') }}
                                                                     </span>
                                                                 @enderror
                                                             </div>
@@ -80,10 +82,10 @@
                                                                 <label
                                                                     for="projectinput1">{{ __('admin/index.Add Product Name In Translation Table') }}</label>
                                                                 <input type="text" id="name" class="form-control"
-                                                                    value="{{ old('name') }}" name="name">
+                                                                       value="{{ old('name') }}" name="name">
                                                                 @error('name')
-                                                                    <span
-                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                <span
+                                                                    class="text-danger">{{ __('admin/index.This Field Is Required') }}
                                                                     </span>
                                                                 @enderror
                                                             </div>
@@ -95,10 +97,10 @@
                                                                 <label
                                                                     for="projectinput1">{{ __('admin/index.Add Product Description In Translation Table') }}</label>
                                                                 <input type="text" id="nameTrans" class="form-control"
-                                                                    name="description">
+                                                                       name="description" value="{{old('description')}}">
                                                                 @error('description')
-                                                                    <span
-                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                <span
+                                                                    class="text-danger">{{ __('admin/index.This Field Is Required') }}
                                                                     </span>
                                                                 @enderror
                                                             </div>
@@ -110,11 +112,11 @@
                                                                 <label
                                                                     for="projectinput1">{{ __('admin/index.Add Product Short Description In Translation Table') }}</label>
                                                                 <input type="text" id="nameTrans" class="form-control"
-                                                                    value="{{ old('short_description') }}"
-                                                                    name="short_description">
+                                                                       value="{{ old('short_description') }}"
+                                                                       name="short_description">
                                                                 @error('short_description')
-                                                                    <span
-                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                <span
+                                                                    class="text-danger">{{ __('admin/index.This Field Is Required') }}
                                                                     </span>
                                                                 @enderror
                                                             </div>
@@ -126,10 +128,11 @@
                                                                 <div class="form-group">
                                                                     <label for="projectinput2">
                                                                         {{ __('admin/index.Product Category') }} </label>
-                                                                    <select name="categories[]" class="select2 form-control"
-                                                                        multiple>
+                                                                    <select name="categories[]"
+                                                                            class="select2 form-control"
+                                                                            multiple style="width: 100%" >
                                                                         <optgroup
-                                                                            label="{{ __('admin/index.Open this select menu') }}">
+                                                                            label="{{ __('admin/index.Open this select menu') }}" >
 
                                                                             @foreach ($data['categories'] as $cat)
                                                                                 <option value="{{ $cat->id }}">
@@ -139,7 +142,7 @@
                                                                         </optgroup>
                                                                     </select>
                                                                     @error('categories')
-                                                                        <span class="text-danger"> {{ $message }}</span>
+                                                                    <span class="text-danger"> {{ $message }}</span>
                                                                     @enderror
                                                                 </div>
                                                             </div>
@@ -152,7 +155,8 @@
                                                                 <div class="form-group">
                                                                     <label for="projectinput2">
                                                                         {{ __('admin/index.Product Brand') }} </label>
-                                                                    <select name="brand_id" class="select2 form-control">
+                                                                    <select name="brand_id"
+                                                                            class="select2 form-control" style="width: 100%">
                                                                         <optgroup
                                                                             label="{{ __('admin/index.Open this select menu') }}">
 
@@ -164,7 +168,7 @@
                                                                         </optgroup>
                                                                     </select>
                                                                     @error('brand_id')
-                                                                        <span class="text-danger"> {{ $message }}</span>
+                                                                    <span class="text-danger"> {{ $message }}</span>
                                                                     @enderror
                                                                 </div>
                                                             </div>
@@ -177,15 +181,15 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group mt-1">
-                                                                <input type="checkbox" value="1" name="status"
-                                                                    id="switcheryColor4" class="switchery" checked
-                                                                    data-color="success" />
+                                                                <input type="checkbox" name="is_active"
+                                                                       id="switcheryColor4" class="switchery" checked
+                                                                       data-color="success"/>
                                                                 <label for="switcheryColor4"
-                                                                    class="card-title ml-1">{{ __('admin/index.Status') }}
+                                                                       class="card-title ml-1">{{ __('admin/index.Status') }}
                                                                 </label>
 
-                                                                @error('status')
-                                                                    <span class="text-danger"> </span>
+                                                                @error('is_active')
+                                                                <span class="text-danger"> </span>
                                                                 @enderror
                                                             </div>
                                                         </div>
@@ -196,12 +200,12 @@
                                                 {{-- ################################################################################## --}}
 
 
-                                                <div class="btn btn-outline-dark next mx-auto" id="next_first">Product Price Data</div>
+                                                {{-- <div class="btn btn-ouline-dark next mx-auto " id="next_first">Product Price Data</div>--}}
 
 
                                                 {{-- ################################################################################## --}}
                                                 {{-- Start Product Price Data --}}
-                                                <div class="product-price-data hidden" id="second">
+                                                <div class="product-price-data " id="second">
                                                     <h4 class="form-section">
                                                         {{ __('admin/index.Product Price') }}
                                                     </h4>
@@ -212,11 +216,11 @@
                                                                 <label
                                                                     for="projectinput1">{{ __('admin/index.Add Product Price') }}</label>
                                                                 <input type="number" id="name" class="form-control"
-                                                                    placeholder="" value="{{ old('price') }}"
-                                                                    name="price">
+                                                                       placeholder="" value="{{ old('price') }}"
+                                                                       name="price">
                                                                 @error('price')
-                                                                    <span
-                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                <span
+                                                                    class="text-danger">{{ __('admin/index.This Field Is Required') }}
                                                                     </span>
                                                                 @enderror
                                                             </div>
@@ -229,11 +233,11 @@
                                                                 <label
                                                                     for="projectinput1">{{ __('admin/index.Add Product Special_price ') }}</label>
                                                                 <input type="text" id="name" class="form-control"
-                                                                    value="{{ old('special_price') }}"
-                                                                    name="special_price">
+                                                                       value="{{ old('special_price') }}"
+                                                                       name="special_price">
                                                                 @error('special_price')
-                                                                    <span
-                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                <span
+                                                                    class="text-danger">{{ __('admin/index.This Field Is Required') }}
                                                                     </span>
                                                                 @enderror
                                                             </div>
@@ -245,13 +249,17 @@
                                                         <div class="col-md-6 col-sm-12">
                                                             <div class="form-group">
                                                                 <label
-                                                                    for="projectinput1">{{ __('admin/index.Add Product Special_price_start') }}</label>
-                                                                <input type="date" id="nameTrans" class="form-control"
-                                                                    value="{{ old('special_price_start') }}"
-                                                                    name="special_price_start">
+                                                                    for="projectinput1">
+                                                                    <i class="la-calendar-times-o"></i>
+                                                                    {{ __('admin/index.Add Product Special_price_start') }}
+
+                                                                </label>
+                                                                <input type="date" id="nameTrans" class="form-control "
+                                                                       value="{{   date('y-m-d') }}"
+                                                                       name="special_price_start">
                                                                 @error('special_price_start')
-                                                                    <span
-                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                <span
+                                                                    class="text-danger">{{ __('admin/index.This Field Is Required') }}
                                                                     </span>
                                                                 @enderror
                                                             </div>
@@ -264,11 +272,11 @@
                                                                 <label
                                                                     for="projectinput1">{{ __('admin/index.Add Product Special_price_end') }}</label>
                                                                 <input type="date" id="nameTrans" class="form-control"
-                                                                    value="{{ old('special_price_end') }}"
-                                                                    name="special_price_end">
+                                                                       value="{{ date('y-m-d') }}"
+                                                                       name="special_price_end">
                                                                 @error('special_price_end')
-                                                                    <span
-                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                <span
+                                                                    class="text-danger">{{ __('admin/index.This Field Is Required') }}
                                                                     </span>
                                                                 @enderror
                                                             </div>
@@ -282,26 +290,26 @@
                                                                 <label
                                                                     for="projectinput1">{{ __('admin/index.Add Product selling_price') }}</label>
                                                                 <input type="number" id="nameTrans" class="form-control"
-                                                                    value="{{ old('selling_price') }}"
-                                                                    name="selling_price">
+                                                                       value="{{ old('selling_price') }}"
+                                                                       name="selling_price">
                                                                 @error('selling_price')
-                                                                    <span
-                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                <span
+                                                                    class="text-danger">{{ __('admin/index.This Field Is Required') }}
                                                                     </span>
                                                                 @enderror
                                                             </div>
                                                         </div>
                                                         {{-- End Product Selling_price --}}
                                                     </div>
-                                                    <div class="btn btn-outline-dark next mx-auto" id="next_second">
-                                                        Product Inventory Data</div>
+                                                    {{--                                                    <div class="btn btn-outline-dark next mx-auto" id="next_second">--}}
+                                                    {{--                                                        Product Inventory Data</div>--}}
                                                 </div>
                                                 {{-- End Product Price Data --}}
                                                 {{-- ################################################################################## --}}
 
                                                 {{-- ################################################################################## --}}
                                                 {{-- Start Product Stock Data --}}
-                                                <div id="product_inventory" class="product-inventory-data hidden col-12">
+                                                <div id="product_inventory" class="product-inventory-data  col-12">
                                                     <h4 class="form-section">
                                                         {{ __('admin/index.Product Stock Data') }}
                                                     </h4>
@@ -312,11 +320,11 @@
                                                                 <label
                                                                     for="projectinput1">{{ __('admin/index.Add Product Sku') }}</label>
                                                                 <input type="number" id="name" class="form-control"
-                                                                    placeholder="" value="{{ old('sku') }}"
-                                                                    name="sku">
+                                                                       placeholder="" value="{{ old('sku') }}"
+                                                                       name="sku">
                                                                 @error('sku')
-                                                                    <span
-                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                <span
+                                                                    class="text-danger">{{ __('admin/index.This Field Is Required') }}
                                                                     </span>
                                                                 @enderror
                                                             </div>
@@ -326,16 +334,22 @@
                                                         {{-- Start Product Manage Stock --}}
                                                         <div class="col-md-6 col-sm-12 ">
                                                             <div class="form-group">
-                                                                <label for="projectinput1">{{ __('admin/index.Manage Stock') }}</label>
-                                                                <select name="manage_stock" class=" select2 form-control" style="width: 100%">
-                                                                    <optgroup label="{{ __('admin/index.Manage Stock') }}">
+                                                                <label
+                                                                    for="projectinput1">{{ __('admin/index.Manage Stock') }}</label>
+                                                                <select name="manage_stock"
+                                                                        class=" select2 form-control"
+                                                                        style="width: 100%">
+                                                                    <optgroup
+                                                                        label="{{ __('admin/index.Manage Stock') }}">
                                                                         <option value="1">Allow Tracking</option>
-                                                                        <option value="0" selected>Don't Allow Tracking</option>
+                                                                        <option value="0" selected>Don't Allow
+                                                                            Tracking
+                                                                        </option>
                                                                     </optgroup>
                                                                 </select>
                                                                 @error('manage_stock')
-                                                                    <span
-                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                <span
+                                                                    class="text-danger">{{ __('admin/index.This Field Is Required') }}
                                                                     </span>
                                                                 @enderror
                                                             </div>
@@ -345,18 +359,21 @@
                                                         {{-- Start Product In_stock --}}
                                                         <div class="col-md-6 ">
                                                             <div class="form-group">
-                                                                <label for="projectinput2">{{ __('admin/index.In Stock') }}</label>
-                                                                <select name="in_stock" class="select2 form-control" style="width: 100%">
+                                                                <label
+                                                                    for="projectinput2">{{ __('admin/index.In Stock') }}</label>
+                                                                <select name="in_stock" class="select2 form-control"
+                                                                        style="width: 100%">
                                                                     <optgroup
                                                                         label="{{ __('admin/index.Product Availability') }}">
                                                                         <option value="1">Available</option>
-                                                                        <option value="0" selected>Not Available</option>
+                                                                        <option value="0" selected>Not Available
+                                                                        </option>
                                                                     </optgroup>
                                                                 </select>
 
                                                                 @error('in_stock')
-                                                                    <span
-                                                                        class="text-danger">{{ __('admin/index.This Field Is Required') }}
+                                                                <span
+                                                                    class="text-danger">{{ __('admin/index.This Field Is Required') }}
                                                                     </span>
                                                                 @enderror
                                                             </div>
@@ -366,8 +383,10 @@
                                                         {{-- Start Product Qty --}}
                                                         <div class="col-md-6 col-sm-12 ">
                                                             <div class="form-group">
-                                                                <label for="projectinput1">{{ __('admin/index.Product Quantity') }}</label>
-                                                                <input type="number" id="qty" class="form-control disabled"
+                                                                <label
+                                                                    for="projectinput1">{{ __('admin/index.Product Quantity') }}</label>
+                                                                <input type="number" id="qty"
+                                                                       class="form-control disabled"
                                                                        placeholder="" value="{{ old('qty') }} "
                                                                        name="qty">
                                                                 @error('qty')
@@ -389,7 +408,7 @@
                                             {{-- Start Product Actions --}}
                                             <div class="form-actions">
                                                 <button type="button" class="btn btn-warning mr-1"
-                                                    onclick="history.back();">
+                                                        onclick="history.back();">
                                                     <i class="ft-x"></i> {{ __('admin/index.Cancel') }}
                                                 </button>
                                                 <button type="submit" class="btn btn-primary">
@@ -414,27 +433,27 @@
 
 @section('script')
     <script>
-        let btn = document.getElementById('next_first');
-        let btnSecond = document.getElementById('next_second');
-        let productSecondData = document.getElementById('second');
-        let product_inventory = document.getElementById('product_inventory');
-        btn.addEventListener('click', function() {
-            productSecondData.classList.toggle('hidden');
-            if (productSecondData.classList.contains('hidden')) {
-                btn.innerText = 'Product Price Data ';
-                product_inventory.classList.add('hidden');
-            } else {
-                btn.innerText = 'previous';
-            }
-        });
-
-        btnSecond.addEventListener('click', function() {
-            product_inventory.classList.toggle('hidden');
-            if (product_inventory.classList.contains('hidden')) {
-                btnSecond.innerText = 'Product Inventory Data ';
-            } else {
-                btnSecond.innerText = 'previous';
-            }
-        });
+        // let btn = document.getElementById('next_first');
+        // let btnSecond = document.getElementById('next_second');
+        // let productSecondData = document.getElementById('second');
+        // let product_inventory = document.getElementById('product_inventory');
+        // btn.addEventListener('click', function() {
+        //     productSecondData.classList.toggle('hidden');
+        //     if (productSecondData.classList.contains('hidden')) {
+        //         btn.innerText = 'Product Price Data ';
+        //         product_inventory.classList.add('hidden');
+        //     } else {
+        //         btn.innerText = 'previous';
+        //     }
+        // });
+        //
+        // btnSecond.addEventListener('click', function() {
+        //     product_inventory.classList.toggle('hidden');
+        //     if (product_inventory.classList.contains('hidden')) {
+        //         btnSecond.innerText = 'Product Inventory Data ';
+        //     } else {
+        //         btnSecond.innerText = 'previous';
+        //     }
+        // });
     </script>
 @stop

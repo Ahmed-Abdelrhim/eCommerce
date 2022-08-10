@@ -66,11 +66,14 @@
           href="{{asset('assets/admin/vendors/'.getCssFile().'/extensions/datedropper.min.css')}}">
     <link rel="stylesheet" type="text/css"
           href="{{asset('assets/admin/vendors/'.getCssFile().'/extensions/timedropper.min.css')}}">
+
+    <link rel="stylesheet" href="{{asset('assets/admin/css-rtl/plugins/file-uploaders/dropzone.css')}}">
     {{--  ######################################################################  --}}
 
 <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/'.getCssFile().'/style-rtl.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/css/style.css')}}">
     <!-- END Custom CSS-->
     {{--    @notify_css--}}
     @yield('style')
@@ -103,8 +106,8 @@
 <!-- ////////////////////////////////////////////////////////////////////////////-->
 @include('dashboard.includes.footer')
 
-@notify_js
-@notify_render
+{{--@notify_js--}}
+{{--@notify_render--}}
 
 <!-- BEGIN VENDOR JS-->
 <script src="{{asset('assets/admin/vendors/js/vendors.min.js')}}" type="text/javascript"></script>
@@ -150,6 +153,8 @@
 <script src="{{asset('assets/admin/js/scripts/forms/checkbox-radio.js')}}" type="text/javascript"></script>
 
 <script src="{{asset('assets/admin/js/scripts/modal/components-modal.js')}}" type="text/javascript"></script>
+{{--<script src="{{asset('assets/admin/vendors/js/extensions/dropzone.min.ls')}}"></script>--}}
+<script src="{{asset('assets/admin/vendors/js/extensions/dropzone.min.js')}}"></script>
 
 <script>
     $('#meridians1').timeDropper({

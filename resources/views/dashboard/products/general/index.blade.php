@@ -50,62 +50,68 @@
                                         <table
                                             class="table display nowrap table-striped table-bordered scroll-horizontal">
                                             {{--Start Table Head--}}
-                                            <thead class="">
+                                            <thead>
                                             <tr>
-                                                <th>{{__('admin/index.Section')}} </th>
-                                                <th> {{__('admin/index.Language')}}</th>
-                                                @isset($type)<th> {{__('admin/index.Main Category')}} </th>@endisset
-                                                <th>{{__('admin/index.Status')}}</th>
-                                                <th>{{__('admin/index.Category Image')}}</th>
-                                                <th>{{__('admin/index.Actions')}}</th>
+                                                <th class="table-dark">ID</th>
+                                                <th class="table-dark">Name</th>
+                                                <th class="table-dark">Actions</th>
                                             </tr>
                                             </thead>
                                             {{--End Table Head--}}
                                             {{--Start Table Head--}}
                                             <tbody>
 
-                                            @isset($categories)
-                                                @foreach($categories as $cat)
+                                            @isset($products)
+                                                @foreach($products as $product)
                                                     <tr>
-                                                        <td>{{$cat->slug}}</td>
-                                                        <td>{{$cat->is_translatable == 1 ? 'EN & AR' : 'EN'}}</td>
-                                                        @isset($type)
-                                                            <td>{{$cat->parent->slug }}</td>
-                                                        @endisset
-                                                        <td>{{$cat->is_active == true ? 'Active' : 'Not active'}}</td>
-                                                        <td><img style="width: 150px; height: 100px;"
-                                                                 src="{{asset('assets/images/categories/'.$cat->photo)}}">
-                                                        </td>
-                                                        <td>
-                                                            <div class="btn-group" role="group"
+                                                        <td class="table-dark">{{$product->id}}</td>
+                                                        <td class="table-dark">{{$product->name }}</td>
+                                                        <td class="table-dark ">
+                                                            <div class="btn-group actions " role="group"
                                                                  aria-label="Basic example">
+                                                                {{--View Full Product--}}
+                                                                <div>
+                                                                    <a href="{{route('full-product',$product->id)}}"
+                                                                       class="btn btn-primary btn-min-width box-shadow-3 mr-1 mb-1">
+                                                                        Full Product
+                                                                    </a>
+                                                                </div>
+                                                                {{--Images Link--}}
+                                                                <div>
+                                                                    <a href="{{route('images',$product->id)}}"
+                                                                       class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">
+                                                                        Images
+                                                                    </a>
+                                                                </div>
                                                                 {{--Update Link--}}
-                                                                <a href="{{route('view-update-category',$cat->id)}}"
-                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">
-                                                                    {{__('admin/index.Update')}}
-                                                                </a>
+                                                                <div>
+                                                                    <a href="{{route('update-product',$product->id)}}"
+                                                                       class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">
+                                                                        {{__('admin/index.Update')}}
+                                                                    </a>
+                                                                </div>
                                                                 {{--Delete Link--}}
-                                                                <a href="{{route('delete-category',$cat->id)}}"
-                                                                   class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">
-                                                                    {{__('admin/index.Delete')}}
-                                                                </a>
+                                                                <div>
+                                                                    <a href="{{route('delete-product',$product->id)}}"
+                                                                       class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">
+                                                                        {{__('admin/index.Delete')}}
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                 @endforeach
-
                                             @endisset
+
                                             </tbody>
                                             {{--End Table Head--}}
                                         </table>
                                         <div class="justify-content-center d-flex">
-
+                                            {{$products->links()}}
                                         </div>
                                     </div>
                                 </div>
                                 {{--End Main Category--}}
-                                {{--Start Sub Category--}}
-                                {{--Start Sub Category--}}
                             </div>
                         </div>
                     </div>
@@ -115,35 +121,3 @@
     </div>
 @endsection
 
-
-{{--@isset($products)--}}
-{{--    @foreach($products as $product)--}}
-{{--        <tr>--}}
-{{--            <td class="table-dark">{{$product->id}}</td>--}}
-{{--            <td class="table-dark">{{$product->name }}</td>--}}
-{{--            <td class="table-dark ">--}}
-{{--                <div class="btn-group actions " role="group"--}}
-{{--                     aria-label="Basic example">--}}
-{{--                    --}}{{--View Full Product --}}
-{{--                    <div>--}}
-{{--                        <a href="{{route('full-product',$product->id)}}"></a>--}}
-{{--                    </div>--}}
-{{--                    --}}{{--Update Link--}}
-{{--                    <div>--}}
-{{--                        <a href="{{route('update-product',$product->id)}}"--}}
-{{--                           class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">--}}
-{{--                            {{__('admin/index.Update')}}--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                    --}}{{--Delete Link--}}
-{{--                    <div>--}}
-{{--                        <a href="{{route('delete-product',$product->id)}}"--}}
-{{--                           class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">--}}
-{{--                            {{__('admin/index.Delete')}}--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </td>--}}
-{{--        </tr>--}}
-{{--    @endforeach--}}
-{{--@endisset--}}

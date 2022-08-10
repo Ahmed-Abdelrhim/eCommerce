@@ -22,7 +22,7 @@ class CreateCategoriesTable extends Migration
             $table->boolean('is_translatable')->default(false);
             $table->timestamps();
 //            $table->unique(['slug']);
-            $table->foreign('parent_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 

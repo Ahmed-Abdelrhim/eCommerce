@@ -162,20 +162,21 @@
 
         // Add open class to parent list item if subitem is active except compact menu
         var menuType = $body.data('menu');
-        if(menuType != 'vertical-compact-menu' && menuType != 'horizontal-menu' && compactMenu === false ){
-            if( $body.data('menu') == 'vertical-menu-modern' ){
-                if( localStorage.getItem("menuLocked") === "true"){
-                    $(".main-menu-content").find('li.active').parents('li').addClass('open');
-                }
-            }
-            else{
-                $(".main-menu-content").find('li.active').parents('li').addClass('open');
-            }
-        }
-        if(menuType == 'vertical-compact-menu' || menuType == 'horizontal-menu'){
-            $(".main-menu-content").find('li.active').parents('li:not(.nav-item)').addClass('open');
-            $(".main-menu-content").find('li.active').parents('li').addClass('active');
-        }
+        // if(menuType != 'vertical-compact-menu' && menuType != 'horizontal-menu' && compactMenu === false ){
+        //     if( $body.data('menu') == 'vertical-menu-modern' ){
+        //         if( localStorage.getItem("menuLocked") === "true"){
+        //             $(".main-menu-content").find('li.active').parents('li').addClass('open');
+        //         }
+        //     }
+        //     else{
+        //         $(".main-menu-content").find('li.active').parents('li').addClass('open');
+        //     }
+        // }
+
+        // if(menuType == 'vertical-compact-menu' || menuType == 'horizontal-menu'){
+        //     $(".main-menu-content").find('li.active').parents('li:not(.nav-item)').addClass('open');
+        //     $(".main-menu-content").find('li.active').parents('li').addClass('active');
+        // }
 
         //card heading actions buttons small screen support
         $(".heading-elements-toggle").on("click",function(){

@@ -1,5 +1,5 @@
 <?php
-define('PAGINATION_COUNT', 15);
+define('PAGINATION_COUNT', 10);
 function getCssFile()
 {
     return app()->getLocale() === 'ar' ? 'css-rtl' : 'css';
@@ -13,7 +13,8 @@ function getAdminImage()
 
 function uploadImage($folder, $image)
 {
-    $image_name = time() . '.' .$image->getClientOriginalExtension();
+//    $image_name = time() . '.' .$image->getClientOriginalExtension();
+    $image_name = time() . '.' .$image->extension();
 //    $image->store('/', $folder);
     $image->move('assets/images/'.$folder,$image_name);
 //    $image_name = time() . $image->hashName();

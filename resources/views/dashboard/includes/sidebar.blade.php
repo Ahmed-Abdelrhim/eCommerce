@@ -36,7 +36,7 @@
             {{--Start Sub Categories--}}
             <li class="nav-item"><a href="{{route('view-categories','sub-categories')}}"><i class="la la-group"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">{{__('admin/index.Sub Categories')}} </span>
-                    <span class="badge badge badge-danger badge-pill float-right mr-2">400</span>
+
                 </a>
                 <ul class="menu-content">
                     {{--Main Category--}}
@@ -54,22 +54,6 @@
                 </ul>
             </li>
             {{--End Sub Categories--}}
-            {{--Start Stores--}}
-{{--            <li class="nav-item"><a href=""><i class="la la-male"></i>--}}
-{{--                    <span class="menu-title" data-i18n="nav.dash.main">{{__('admin/sidebar.Stores') }}  </span>--}}
-{{--                    <span--}}
-{{--                        class="badge badge badge-success badge-pill float-right mr-2"></span>--}}
-{{--                    --}}{{--                                        {{App\Models\Vendor::count()}}--}}
-{{--                </a>--}}
-{{--                <ul class="menu-content">--}}
-{{--                    <li class="active"><a class="menu-item" href="#"--}}
-{{--                                          data-i18n="nav.dash.ecommerce">{{__('admin/sidebar.Show All')}} </a>--}}
-{{--                    </li>--}}
-{{--                    <li><a class="menu-item" href="#" data-i18n="nav.dash.crypto">{{__('admin/sidebar.Add store')}}</a>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
-{{--            </li>--}}
-            {{--End Stores--}}
 
             {{--Start Product--}}
 {{--            <i class="fa-brands fa-product-hunt"></i>--}}
@@ -82,6 +66,7 @@
 {{--                                          data-i18n="nav.dash.ecommerce">{{__('admin/sidebar.Show All')}} </a>--}}
 {{--                    </li>--}}
                     <li><a class="menu-item" href="{{route('products-general-info')}}" data-i18n="nav.dash.crypto">{{__('admin/index.Add Product')}}</a>
+                    <li><a class="menu-item" href="{{route('products')}}" data-i18n="nav.dash.crypto">{{__('admin/index.Products')}}</a>
                     </li>
                 </ul>
             </li>
