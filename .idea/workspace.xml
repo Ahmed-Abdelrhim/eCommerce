@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcb63d93-663b-40c0-b35a-6e35314dd5b7" name="Default Changelist" comment="" />
+    <list default="true" id="bcb63d93-663b-40c0-b35a-6e35314dd5b7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/'numeric" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/ProductImagesRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Rules/SellingPrice.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/1660151822.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/1660151851.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/products/general/fullProduct.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/products/general/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/products/images/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/general.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/CategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PrdouctGeneralRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PrdouctGeneralRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/CategoryTranslation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CategoryTranslation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Images.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2022_07_29_153950_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_07_29_153950_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2022_08_03_010839_create_images_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_08_03_010839_create_images_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/admin/css-rtl/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css-rtl/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/admin/css-rtl/plugins/file-uploaders/dropzone.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css-rtl/plugins/file-uploaders/dropzone.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/admin/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/admin/js/core/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/js/core/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/general/general.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/general/general.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/general/price.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +45,19 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="blog" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\xampp\htdocs\eCommerce\blog\.idea" />
+      </set>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -119,16 +164,25 @@
     </include_path>
   </component>
   <component name="ProjectId" id="2CN3aCUBLm8FuB50IkRWsayatO7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\eCommerce\blog\app\Http\Controllers\Dashboard" />
       <recent name="C:\xampp\htdocs\eCommerce\blog\app\Http\Requests" />
       <recent name="C:\xampp\htdocs\eCommerce\blog\app\Models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\eCommerce\blog\database\factories" />
+      <recent name="C:\xampp\htdocs\eCommerce\blog\database\migrations" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -171,11 +225,45 @@
       <workItem from="1658874282739" duration="19308000" />
       <workItem from="1658933554904" duration="2596000" />
       <workItem from="1658937377580" duration="6667000" />
-      <workItem from="1658955251196" duration="16024000" />
+      <workItem from="1658955251196" duration="23011000" />
+      <workItem from="1659020334373" duration="8118000" />
+      <workItem from="1659040794991" duration="23158000" />
+      <workItem from="1659108818408" duration="6754000" />
+      <workItem from="1659127904890" duration="24009000" />
+      <workItem from="1659191986156" duration="11588000" />
+      <workItem from="1659212789260" duration="18816000" />
+      <workItem from="1659280978112" duration="23611000" />
+      <workItem from="1659371193645" duration="6569000" />
+      <workItem from="1659379314125" duration="3387000" />
+      <workItem from="1659402931643" duration="10235000" />
+      <workItem from="1659458915718" duration="1852000" />
+      <workItem from="1659472427011" duration="20540000" />
+      <workItem from="1659623718413" duration="12229000" />
+      <workItem from="1659710169078" duration="3091000" />
+      <workItem from="1659732888891" duration="9988000" />
+      <workItem from="1659818127555" duration="1691000" />
+      <workItem from="1659973041119" duration="23931000" />
+      <workItem from="1660061304497" duration="25279000" />
+      <workItem from="1660148105147" duration="4961000" />
+      <workItem from="1660161821140" duration="3872000" />
+      <workItem from="1660172098070" duration="2772000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

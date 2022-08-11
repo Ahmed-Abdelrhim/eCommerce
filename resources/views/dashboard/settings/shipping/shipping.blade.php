@@ -16,7 +16,7 @@
                         <div class="row">
                             <div class=" col-xl-6 col-lg-6 col-md-6 ">
                                 <div class="form-group">
-                                    <label for="projectinput1"> Shipping Method </label>
+                                    <label for="projectinput1"> {{__('admin/index.Shipping Method')}} </label>
                                     <input type="text" id="pac-input" class="form-control"
                                            value="{{$shippingMethod->value}}" name="key">
 
@@ -31,7 +31,7 @@
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <label for="projectinput1"> Cost </label>
+                                    <label for="projectinput1"> {{__('admin/index.Cost')}} </label>
                                     <input type="number" id="pac-input" class="form-control"
                                            value="{{$shippingMethod['plain_value']}}" name="cost">
 
@@ -49,7 +49,7 @@
                                     <input type="checkbox" value="1" name="active"
                                            id="switcheryColor4" class="switchery"
                                            data-color="success" checked/>
-                                    <label for="switcheryColor4" class="card-title ml-1">Status
+                                    <label for="switcheryColor4" class="card-title ml-1">{{__('admin/index.Status')}}
                                     </label>
 
                                     @error('active')

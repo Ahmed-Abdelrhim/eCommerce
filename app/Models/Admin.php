@@ -10,7 +10,7 @@ class Admin extends Authenticatable
 {
     use Notifiable;
     protected $table = 'admins';
-    protected $fillable = ['id','name','email','password','created_at','updated_at'];
+    protected $fillable = ['id','name','email','password','photo','created_at','updated_at'];
     protected $hidden = ['created_at','updated_at'];
     public $timestamps = true;
 

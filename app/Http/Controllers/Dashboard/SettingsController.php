@@ -28,9 +28,9 @@ class SettingsController extends Controller
             $shippingMethod->update(['plain_value' => $request->cost]);
             $shippingMethod->value = $request->key;
             $shippingMethod->save();
-            return redirect()->back()->with(['success' => 'Updated Successfully Into Database']);
+            return redirect()->back()->with(['success' => __('admin/index.Updated Successfully Into Database')]);
         } catch(Exception $exception) {
-            return 'Something Went Wrong While Updating Into Database';
+            return __('admin/index.Something Went Wrong While Updating Into Database Please Try Again');
         }
     }
 }

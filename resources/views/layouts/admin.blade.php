@@ -24,16 +24,20 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/'.getCssFile().'/vendors.css')}}">
 
     {{--  ######################################################################  --}}
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/vendors/'.getCssFile().'/weather-icons/climacons.min.css')}}">
+    <link rel="stylesheet" type="text/css"
+          href="{{asset('assets/admin/vendors/'.getCssFile().'/weather-icons/climacons.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/fonts/meteocons/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/vendors/'.getCssFile().'/charts/morris.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/vendors/'.getCssFile().'/charts/chartist.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/vendors/'.getCssFile().'/forms/selects/select2.min.css')}}">
+    <link rel="stylesheet" type="text/css"
+          href="{{asset('assets/admin/vendors/'.getCssFile().'/charts/chartist.css')}}">
+    <link rel="stylesheet" type="text/css"
+          href="{{asset('assets/admin/vendors/'.getCssFile().'/forms/selects/select2.min.css')}}">
     <link rel="stylesheet" type="text/css"
           href="{{asset('assets/admin/vendors/'.getCssFile().'/charts/chartist-plugin-tooltip.css')}}">
     <link rel="stylesheet" type="text/css"
           href="{{asset('assets/admin/vendors/css/forms/toggle/bootstrap-switch.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/vendors/'.getCssFile().'/forms/toggle/switchery.min.css')}}">
+    <link rel="stylesheet" type="text/css"
+          href="{{asset('assets/admin/vendors/'.getCssFile().'/forms/toggle/switchery.min.css')}}">
     <link rel="stylesheet" type="text/css"
           href="{{asset('assets/admin/'.getCssFile().'/core/menu/menu-types/vertical-menu.css')}}">
 
@@ -56,14 +60,20 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/'.getCssFile().'/pages/timeline.css')}}">
     {{--  ######################################################################  --}}
 
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/vendors/'.getCssFile().'/cryptocoins/cryptocoins.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/vendors/'.getCssFile().'/extensions/datedropper.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/vendors/'.getCssFile().'/extensions/timedropper.min.css')}}">
+    <link rel="stylesheet" type="text/css"
+          href="{{asset('assets/admin/vendors/'.getCssFile().'/cryptocoins/cryptocoins.css')}}">
+    <link rel="stylesheet" type="text/css"
+          href="{{asset('assets/admin/vendors/'.getCssFile().'/extensions/datedropper.min.css')}}">
+    <link rel="stylesheet" type="text/css"
+          href="{{asset('assets/admin/vendors/'.getCssFile().'/extensions/timedropper.min.css')}}">
+
+    <link rel="stylesheet" href="{{asset('assets/admin/css-rtl/plugins/file-uploaders/dropzone.css')}}">
     {{--  ######################################################################  --}}
 
-    <!-- END Page Level CSS-->
+<!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/'.getCssFile().'/style-rtl.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/css/style.css')}}">
     <!-- END Custom CSS-->
     {{--    @notify_css--}}
     @yield('style')
@@ -73,6 +83,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200;1,300;1,400;1,500;1,700;1,800&display=swap"
         rel="stylesheet">
+    {{--Font Awesome --}}
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    {{--Font Awesome --}}
+
     <style>
         body {
             font-family: 'Nunito', 'Cairo', sans-serif;
@@ -91,8 +106,8 @@
 <!-- ////////////////////////////////////////////////////////////////////////////-->
 @include('dashboard.includes.footer')
 
-@notify_js
-@notify_render
+{{--@notify_js--}}
+{{--@notify_render--}}
 
 <!-- BEGIN VENDOR JS-->
 <script src="{{asset('assets/admin/vendors/js/vendors.min.js')}}" type="text/javascript"></script>
@@ -138,6 +153,8 @@
 <script src="{{asset('assets/admin/js/scripts/forms/checkbox-radio.js')}}" type="text/javascript"></script>
 
 <script src="{{asset('assets/admin/js/scripts/modal/components-modal.js')}}" type="text/javascript"></script>
+{{--<script src="{{asset('assets/admin/vendors/js/extensions/dropzone.min.ls')}}"></script>--}}
+<script src="{{asset('assets/admin/vendors/js/extensions/dropzone.min.js')}}"></script>
 
 <script>
     $('#meridians1').timeDropper({

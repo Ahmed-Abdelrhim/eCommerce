@@ -3,84 +3,81 @@
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
 
             <li class="nav-item active"><a href=""><i class="la la-mouse-pointer"></i><span
-                        class="menu-title" data-i18n="nav.add_on_drag_drop.main">{{__('admin/sidebar.Main')}} </span></a>
+                        class="menu-title"
+                        data-i18n="nav.add_on_drag_drop.main">{{__('admin/sidebar.Main')}} </span></a>
             </li>
 
             <ul class="menu-content">
                 <li class="active"><a class="menu-item" href="#"
                                       data-i18n="nav.dash.ecommerce"> عرض الكل </a>
                 </li>
-                {{--                    <li>--}}
-                {{--                        <a class="menu-item" href="#" data-i18n="nav.dash.crypto">أضافة--}}
-                {{--                            قسم جديد </a>--}}
-                {{--                    </li>--}}
+
             </ul>
             </li>
-
+            {{--Start Main Categories--}}
             <li class="nav-item"><a href=""><i class="la la-group"></i>
-                    <span class="menu-title" data-i18n="nav.dash.main">{{__('admin/sidebar.Secondary Sections')}} </span>
-                    <span
-                        class="badge badge badge-danger badge-pill float-right mr-2">400</span>
+                    <span class="menu-title" data-i18n="nav.dash.main">{{__('admin/index.Categories')}} </span>
+                    {{--<span class="badge badge badge-danger badge-pill float-right mr-2">400</span>--}}
+                </a>
+
+                <ul class="menu-content">
+                    {{--Main Category --}}
+                    <li class="active"><a class="menu-item" href="{{route('view-categories','main-category')}}"
+                                          data-i18n="nav.dash.ecommerce"> {{__('admin/index.Main Category')}} </a>
+                    </li>
+                    {{-- Start Add Main Category--}}
+                    <li class="active"><a class="menu-item" href="{{route('add-category','main-category')}}"
+                                          data-i18n="nav.dash.ecommerce"> {{__('admin/index.Add Main Category')}} </a>
+                    </li>
+                    {{-- End Add Main Category --}}
+                </ul>
+            </li>
+            {{--End Main Categories--}}
+            {{--Start Sub Categories--}}
+            <li class="nav-item"><a href="{{route('view-categories','sub-categories')}}"><i class="la la-group"></i>
+                    <span class="menu-title" data-i18n="nav.dash.main">{{__('admin/index.Sub Categories')}} </span>
+
                 </a>
                 <ul class="menu-content">
-                    <li class="active"><a class="menu-item" href="#"
-                                          data-i18n="nav.dash.ecommerce"> {{__('admin/sidebar.Show All')}} </a>
+                    {{--Main Category--}}
+                    <li class="active"><a class="menu-item" href="{{route('view-categories','sub-category')}}"
+                                          data-i18n="nav.dash.ecommerce"> {{__('admin/index.Sub Categories')}} </a>
                     </li>
-                    <li><a class="menu-item" href="#" data-i18n="nav.dash.crypto">{{__('admin/sidebar.Add secondary section')}}</a>
+                    {{--Start Add Main Category--}}
+                        <li class="active">
+                            <a class="menu-item" data-i18n="nav.dash.ecommerce" href="{{route('add-category','sub-category')}}">
+                                {{__('admin/index.Add Sub Category')}}
+                            </a>
+                        </li>
+                    {{--End Add Main Category--}}
+
+                </ul>
+            </li>
+            {{--End Sub Categories--}}
+
+            {{--Start Product--}}
+{{--            <i class="fa-brands fa-product-hunt"></i>--}}
+            <li class="nav-item"><a href=""><i class="fa-brands fa-product-hunt"></i>
+                    <span class="menu-title" data-i18n="nav.dash.main">{{__('admin/index.Products') }}  </span>
+
+                </a>
+                <ul class="menu-content">
+{{--                    <li class="active"><a class="menu-item" href="#"--}}
+{{--                                          data-i18n="nav.dash.ecommerce">{{__('admin/sidebar.Show All')}} </a>--}}
+{{--                    </li>--}}
+                    <li><a class="menu-item" href="{{route('products-general-info')}}" data-i18n="nav.dash.crypto">{{__('admin/index.Add Product')}}</a>
+                    <li><a class="menu-item" href="{{route('products')}}" data-i18n="nav.dash.crypto">{{__('admin/index.Products')}}</a>
                     </li>
                 </ul>
             </li>
-
-            <li class="nav-item"><a href=""><i class="la la-male"></i>
-                    <span class="menu-title" data-i18n="nav.dash.main">{{__('admin/sidebar.Stores') }}  </span>
-                    <span
-                        class="badge badge badge-success badge-pill float-right mr-2"></span>
-                    {{--                                        {{App\Models\Vendor::count()}}--}}
-                </a>
-                <ul class="menu-content">
-                    <li class="active"><a class="menu-item" href="#"
-                                          data-i18n="nav.dash.ecommerce">{{__('admin/sidebar.Show All')}} </a>
-                    </li>
-                    <li><a class="menu-item" href="#" data-i18n="nav.dash.crypto">{{__('admin/sidebar.Add store')}}</a>
-                    </li>
-                </ul>
-            </li>
-
-
-            {{--            <li class="nav-item"><a href=""><i class="la la-male"></i>--}}
-            {{--                    <span class="menu-title" data-i18n="nav.dash.main">الطلاب  </span>--}}
-            {{--                    <span--}}
-            {{--                        class="badge badge badge-warning  badge-pill float-right mr-2"></span>--}}
-            {{--                </a>--}}
-            {{--                <ul class="menu-content">--}}
-            {{--                    <li class="active"><a class="menu-item" href=""--}}
-            {{--                                          data-i18n="nav.dash.ecommerce"> عرض الكل </a>--}}
-            {{--                    </li>--}}
-            {{--                    <li><a class="menu-item" href="" data-i18n="nav.dash.crypto">أضافة--}}
-            {{--                            طالب </a>--}}
-            {{--                    </li>--}}
-            {{--                </ul>--}}
-            {{--            </li>--}}
-
-
-            {{--            <li class="nav-item">--}}
-            {{--                <a href=""><i class="la la-male"></i>--}}
-            {{--                    <span class="menu-title" data-i18n="nav.dash.main">تذاكر المراسلات   </span>--}}
-            {{--                    <span--}}
-            {{--                        class="badge badge badge-danger  badge-pill float-right mr-2">0</span>--}}
-            {{--                </a>--}}
-            {{--                <ul class="menu-content">--}}
-            {{--                    <li class="active"><a class="menu-item" href=""--}}
-            {{--                                          data-i18n="nav.dash.ecommerce"> تذاكر الطلاب </a>--}}
-            {{--                    </li>--}}
-            {{--                </ul>--}}
-            {{--            </li>--}}
+            {{--End Product--}}
 
             {{--Settings--}}
             <li class=" nav-item"><a href="#"><i class="la la-bars"></i> <span class="menu-title"
-                                                                                    data-i18n="nav.templates.main">{{__('admin/sidebar.Settings')}}</span></a>
+                                                                               data-i18n="nav.templates.main">{{__('admin/sidebar.Settings')}}</span></a>
                 <ul class="menu-content">
-                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{__('admin/sidebar.Shipping Methods')}}</a>
+                    <li><a class="menu-item" href="#"
+                           data-i18n="nav.templates.vert.main">{{__('admin/sidebar.Shipping Methods')}}</a>
                         <ul class="menu-content">
                             <li><a class="menu-item" href="{{route('shipping','free')}}"
                                    data-i18n="nav.templates.vert.classic_menu">{{__('admin/sidebar.Free Shipping')}}</a>
@@ -93,16 +90,6 @@
                             </li>
                         </ul>
                     </li>
-                    {{--                    <li><a class="menu-item" href="#" data-i18n="nav.templates.horz.main">Horizontal</a>--}}
-                    {{--                        <ul class="menu-content">--}}
-                    {{--                            <li><a class="menu-item" href="../horizontal-menu-template"--}}
-                    {{--                                   data-i18n="nav.templates.horz.classic">Classic</a>--}}
-                    {{--                            </li>--}}
-                    {{--                            <li><a class="menu-item" href="../horizontal-menu-template-nav"--}}
-                    {{--                                   data-i18n="nav.templates.horz.top_icon">Full Width</a>--}}
-                    {{--                            </li>--}}
-                    {{--                        </ul>--}}
-                    {{--                    </li>--}}
                 </ul>
             </li>
             <li class=" navigation-header">

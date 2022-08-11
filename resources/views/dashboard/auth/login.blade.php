@@ -15,7 +15,7 @@
                             </div>
                         </div>
                         <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2">
-                            <span>الدخول للوحة التحكم </span>
+                            <span>{{__('admin/index.Admin Login')}} </span>
                         </h6>
                     </div>
                     @include('dashboard.includes.alerts.errors')
@@ -25,24 +25,23 @@
                             <form class="form-horizontal form-simple" action="{{route('admin.post.login')}}"
                                   method="POST"
                                   novalidate>
-                                {{--                                action="{{route('admin.login')}}"--}}
                                 @csrf
                                 <fieldset class="form-group position-relative has-icon-left mb-0">
                                     {{--                    Email Input                          --}}
                                     <input type="text" name="email" class="form-control form-control-lg input-lg"
-                                           value="{{old('email')}}" id="email" placeholder="Email">
+                                           value="{{old('email')}}" id="email" placeholder="Username">
                                     <div class="form-control-position">
                                         <i class="ft-user"></i>
                                     </div>
-{{--                                    @error('email')--}}
-{{--                                    <span class="text-danger">{{$message}}</span>--}}
-{{--                                    @enderror--}}
+                                    @error('email')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
 
                                 </fieldset>
-                                <fieldset class="form-group position-relative has-icon-left">
+                                <fieldset class="form-group position-relative has-icon-left mt-1">
                                     {{--                    Password Input                  --}}
                                     <input type="password" name="password"
-                                           class="form-control form-control-lg input-lg"
+                                           class="form-control form-control-lg input-lg "
                                            id="user-password"
                                            placeholder="Password">
                                     <div class="form-control-position">
@@ -57,13 +56,13 @@
                                         <fieldset>
                                             <input type="checkbox" name="remember_me" id="remember-me"
                                                    class="chk-remember">
-                                            <label for="remember-me">Remember me</label>
+                                            <label for="remember-me">{{__('admin/index.Remember me')}}</label>
                                         </fieldset>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-info btn-lg btn-block"><i
                                         class="ft-unlock"></i>
-                                    login
+                                    {{__('admin/index.login')}}
                                 </button>
                             </form>
                         </div>
